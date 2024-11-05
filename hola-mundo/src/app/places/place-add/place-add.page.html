@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>{{titulo_pagina}}</ion-title>
+      <ion-button slot="start">
+        <ion-back-button defaultHref="/places"></ion-back-button>
+      </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-input placeholder={{holder_titulo}} type="text" #title></ion-input>
+        <ion-input placeholder={{holder_image}} type="text" #image></ion-input>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col class="ion-text-center">
+      <ion-button color="primary" (click)="saveNewPlace(title, image)">{{text_button_save}}</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>
